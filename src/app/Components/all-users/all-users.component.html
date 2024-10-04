@@ -1,0 +1,31 @@
+<app-menu></app-menu>
+
+<table class="table" border="1">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody *ngFor ="let u of users">
+    <tr>
+      <td>{{u.username}}</td>
+      <td>{{u.password}}</td>
+      <td>{{u.firstName}}</td>
+      <td>{{u.lastName}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.role}}</td>
+      <td> <a class="btn btn-danger" (click)="deleteUser(u.username)">DELETE</a>&nbsp;
+        <a class="btn btn-success" [routerLink]="['/update-user',u.username]">EDIT</a></td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+    

@@ -1,0 +1,65 @@
+<app-menu></app-menu>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form (ngSubmit)="updateUser()">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="./assets/img/logo.jpg" alt=""/>
+                <h3>Welcome</h3>
+                <p>You are 30 seconds away from earning your own money!</p>
+                <br/>
+            </div>
+            <div class="col-md-9 register-right">
+    
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Update User</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *"name="firstName"  [(ngModel)]="firstName" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" name="lastName"[(ngModel)]="lastName"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Password *" name="password"[(ngModel)]="password" />
+                                </div>
+                                
+                               
+                                 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *"name="email" [(ngModel)]="email" />
+                                </div>
+                                
+                                <div class="form-group">
+                                    <select class="form-control" [(ngModel)]="role" name="role">
+                                        <option value="{{role}}">{{role}}</option>
+                                        <option>User</option>
+                                        <option>Faculty</option>
+                                       
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder=" Username *"name="username" readonly [(ngModel)]="username" />
+                                </div>
+                                
+                                <input type="submit" class="btnRegister"  value="Update"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>
