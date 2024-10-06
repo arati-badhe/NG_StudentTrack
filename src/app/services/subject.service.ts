@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -28,8 +28,11 @@ export class SubjectService {
     const url = `http://localhost:8080/subject/update-Subject/${id}`;
 
     return this.http.get(url);
-
-  
+}
+deleteSubject(id: any): Observable<any> {
+  const url = `http://localhost:8080/subject/delete-subject/${id}`;
+  const params = new HttpParams().set('id', id);
+  return this.http.delete(url, { params,responseType: 'text' });
 }
 
 }

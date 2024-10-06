@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -30,6 +30,11 @@ export class StudentService {
 
     return this.http.get(url);
 
+  }
+  deleteStudent(id: any): Observable<any> {
+    const url = `http://localhost:8080/student/delete-student/${id}`;
+    const params = new HttpParams().set('id', id);
+    return this.http.delete(url, { params,responseType: 'text' });
   }
   
 }
