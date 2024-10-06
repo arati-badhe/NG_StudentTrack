@@ -15,7 +15,7 @@
       <td>{{s.name}}</td>
       <td>{{s.email}}</td>
       
-      <td> <a class="btn btn-danger" [routerLink]="['/delete-student-by-id',s.id]" >DELETE</a>&nbsp;
+      <td> <a class="btn btn-danger"  (click)="deleteStudent(s.id)" >DELETE</a>&nbsp;
         <a class="btn btn-success" [routerLink]="['/update-student',s.id]">EDIT</a></td>
 
     </tr>

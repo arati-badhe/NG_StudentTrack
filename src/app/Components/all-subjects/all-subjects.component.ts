@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SubjectService } from 'src/app/services/subject.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { SubjectService } from 'src/app/services/subject.service';
   styleUrls: ['./all-subjects.component.css']
 })
 export class AllSubjectsComponent {
-  constructor(private subjectService:SubjectService) {}
+  constructor(private subjectService:SubjectService,private router:Router) {}
 
   ngOnInit(): void {
     this.getAllSubject();
@@ -18,6 +19,14 @@ export class AllSubjectsComponent {
   getAllSubject() {
     this.subjectService.getAllSubject().subscribe((response)=> {
       this.subjects = response;
+    });
+  }
+  deleteSubject(username: any) {
+    this.subjectService.deleteSubject(username).subscribe((response) => {
+      alert('User deleted');
+      this.router.navigate(['/get-all-users']).then(() => {
+        window.location.reload();
+      });
     });
   }
 }

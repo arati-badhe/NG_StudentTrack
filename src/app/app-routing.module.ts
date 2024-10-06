@@ -12,6 +12,10 @@ import { UpdateUserComponent } from './Components/update-user/update-user.compon
 import { EditStudentComponent } from './Components/edit-student/edit-student.component';
 import { EditSubjectComponent } from './Components/edit-subject/edit-subject.component';
 import { DeleteUserComponent } from './Components/delete-user/delete-user.component';
+import { AttendanceComponent } from './Components/attendance/attendance.component';
+import { ViewAttendanceComponent } from './Components/view-attendance/view-attendance.component';
+import { DeleteStudentComponent } from './Components/delete-student/delete-student.component';
+import { DeleteSubjectComponent } from './Components/delete-subject/delete-subject.component';
 
 const routes: Routes = [
   {
@@ -44,6 +48,9 @@ const routes: Routes = [
     path:"update-student/:id", component:EditStudentComponent
   }
   ,
+  {
+    path:"delete-student/:id", component:DeleteStudentComponent
+  },
   
   {
     path:'add-subject',component:AddSubjectComponent
@@ -53,6 +60,15 @@ const routes: Routes = [
   },
   {
     path:"update-subject/:id", component:EditSubjectComponent
+  },
+  {
+    path:"delete-subject/:id", component:DeleteSubjectComponent
+  },
+  {
+    path:'attendance',  component: AttendanceComponent
+  },
+  {
+    path:'view-attendance', component: ViewAttendanceComponent
   }
 
 

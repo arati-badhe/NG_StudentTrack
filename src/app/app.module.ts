@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Components/home/home.component';
 import { MenuComponent } from './Components/menu/menu.component';
@@ -20,6 +20,8 @@ import { EditStudentComponent } from './Components/edit-student/edit-student.com
 import { DeleteStudentComponent } from './Components/delete-student/delete-student.component';
 import { DeleteSubjectComponent } from './Components/delete-subject/delete-subject.component';
 import { EditSubjectComponent } from './Components/edit-subject/edit-subject.component';
+import { ViewAttendanceComponent } from './Components/view-attendance/view-attendance.component';
+import { AttendanceComponent } from './Components/attendance/attendance.component';
 
 
 @NgModule({
@@ -40,12 +42,15 @@ import { EditSubjectComponent } from './Components/edit-subject/edit-subject.com
          DeleteStudentComponent,
          DeleteSubjectComponent,
          EditSubjectComponent ,
+         AttendanceComponent,
+         ViewAttendanceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

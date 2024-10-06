@@ -21,8 +21,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="['/add-student']">Add Student</a></li>
-            <li><a class="dropdown-item"  [routerLink]="['/get-all-student']">Get All Student</a></li>
-            
+            <li><a class="dropdown-item"  [routerLink]="['/get-all-student']">Get All Student</a></li>  
           </ul>
       </div>
         <div class="nav-item dropdown">
@@ -31,8 +30,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="['/add-subject']">Add Subject</a></li>
-            <li><a class="dropdown-item"  [routerLink]="['/get-all-subject']">Get All Subject</a></li>
-            
+            <li><a class="dropdown-item"  [routerLink]="['/get-all-subject']">Get All Subject</a></li> 
           </ul>
       </div>
         <div class="nav-item dropdown">
@@ -40,10 +38,12 @@
             Attendance
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item"  [routerLink]="['/take-attendance']">Take Attendance</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/get-all-attendance-records']">Show All Attendance</a></li>
-            
-          </ul>
+            <li><a class="dropdown-item"  [routerLink]="['/attendance']">Take Attendance</a></li>
+            <li><a class="dropdown-item" [routerLink]="['/view-attendance']">Show All Attendance</a></li> 
+          </ul>  
+      </div>
+      <div>
+        <a class="navbar-brand" href="#" role="button" data-bs-toggle="collapse" aria-expanded="false" (click)="logout()">Logout</a> 
       </div>
       </div>
     </div>
